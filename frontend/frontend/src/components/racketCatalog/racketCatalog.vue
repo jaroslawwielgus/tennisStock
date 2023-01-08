@@ -7,32 +7,32 @@
       <div id="contentRackets" class="box">
         <div id="cols" class="columns">
           <div class="column">
-            <racketTile
+            <itemTile
               v-for="racket in this.splitToThreeColumns(
                 paginatedRackets
               )[0]"
               :key="racket.name"
-              :racket="racket"
+              :item="racket"
               style="cursor: pointer"
             />
           </div>
           <div class="column">
-            <racketTile
+            <itemTile
               v-for="racket in this.splitToThreeColumns(
                 paginatedRackets
               )[1]"
               :key="racket.name"
-              :racket="racket"
+              :item="racket"
               style="cursor: pointer"
             />
           </div>
           <div class="column">
-            <racketTile
+            <itemTile
               v-for="racket in this.splitToThreeColumns(
                 paginatedRackets
               )[2]"
               :key="racket.name"
-              :racket="racket"
+              :item="racket"
               style="cursor: pointer"
             />
           </div>
@@ -59,12 +59,12 @@
 
 <script>
 import { mapActions, mapState } from "vuex";
-import racketTile from "./racketTile.vue";
+import itemTile from "../itemTile.vue";
 
 export default {
   name: "racketsCatalog",
   components: {
-    racketTile,
+    itemTile,
   },
 
   data() {

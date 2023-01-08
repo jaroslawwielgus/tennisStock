@@ -42,8 +42,12 @@ public class RacketController {
         Racket oldRacket = repository.findById(id).orElse(null);
         // System.out.println(racket.getName());
         oldRacket.setName(racket.getName());
-        oldRacket.setWeight(racket.getWeight());
+        oldRacket.setDescription(racket.getDescription());
+        oldRacket.setStrungWeight(racket.getStrungWeight());
+        oldRacket.setLength(racket.getLength());
+        oldRacket.setHeadSize(racket.getHeadSize());
         oldRacket.setStringPattern(racket.getStringPattern());
+        oldRacket.setBeamWidth(racket.getBeamWidth());
         oldRacket.setStiffness(racket.getStiffness());
         oldRacket.setPrice(racket.getPrice());
         return repository.save(oldRacket);
@@ -56,11 +60,23 @@ public class RacketController {
         if (racket.getName() != null) {
             oldRacket.setName(racket.getName());
         }
-        if (racket.getWeight() > 0) {
-            oldRacket.setWeight(racket.getWeight());
+        if (racket.getDescription() != null) {
+            oldRacket.setDescription(racket.getDescription());
+        }
+        if (racket.getStrungWeight() > 0) {
+            oldRacket.setStrungWeight(racket.getStrungWeight());
+        }
+        if (racket.getLength() > 0) {
+            oldRacket.setLength(racket.getLength());
+        }
+        if (racket.getHeadSize() > 0) {
+            oldRacket.setHeadSize(racket.getHeadSize());
         }
         if (racket.getStringPattern() != null) {
             oldRacket.setStringPattern(racket.getStringPattern());
+        }
+        if (racket.getBeamWidth() != null) {
+            oldRacket.setBeamWidth(racket.getBeamWidth());
         }
         if (racket.getStiffness() > 0) {
             oldRacket.setStiffness(racket.getStiffness());

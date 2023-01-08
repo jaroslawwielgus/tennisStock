@@ -13,8 +13,12 @@ public class Racket {
     private int id;
 
     private String name;
-    private int weight;
+    private String description;
+    private int strungWeight;
+    private float length;
+    private int headSize;
     private String stringPattern;
+    private String beamWidth;
     private int stiffness;
-    private int price;
+    private float price;
 }
