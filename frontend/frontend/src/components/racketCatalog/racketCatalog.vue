@@ -1,49 +1,56 @@
 <template>
-  <div id="container">
-    <div>
+  <div id="content">
+    <div id="divTitle">
       <p class="title">Katalog rakiet</p>
     </div>
-    <div id="content">
-      <div id="contentOuter" class="columns" v-if="loaded">
-        <div
-          id="contentInner"
-          class="box column"
-        >
-          <div id="cols" class="columns">
-            <div class="column">
-              <racketTile
-                v-for="racket in this.splitToThreeColumns(
-                  rackets
-                )[0]"
-                :key="racket.name"
-                :racket="racket"
-                style="cursor: pointer"
-                @click.native="chooseRacket(racket)"
-              />
-            </div>
-            <div class="column">
-              <racketTile
-                v-for="racket in this.splitToThreeColumns(
-                  rackets
-                )[1]"
-                :key="racket.name"
-                :racket="racket"
-                style="cursor: pointer"
-                @click.native="chooseRacket(racket)"
-              />
-            </div>
-            <div class="column">
-              <racketTile
-                v-for="racket in this.splitToThreeColumns(
-                  rackets
-                )[2]"
-                :key="racket.name"
-                :racket="racket"
-                style="cursor: pointer"
-                @click.native="chooseRacket(racket)"
-              />
-            </div>
+    <div id="contentRacketsWithPagination" v-if="loaded">
+      <div id="contentRackets" class="box">
+        <div id="cols" class="columns">
+          <div class="column">
+            <racketTile
+              v-for="racket in this.splitToThreeColumns(
+                paginatedRackets
+              )[0]"
+              :key="racket.name"
+              :racket="racket"
+              style="cursor: pointer"
+            />
           </div>
+          <div class="column">
+            <racketTile
+              v-for="racket in this.splitToThreeColumns(
+                paginatedRackets
+              )[1]"
+              :key="racket.name"
+              :racket="racket"
+              style="cursor: pointer"
+            />
+          </div>
+          <div class="column">
+            <racketTile
+              v-for="racket in this.splitToThreeColumns(
+                paginatedRackets
+              )[2]"
+              :key="racket.name"
+              :racket="racket"
+              style="cursor: pointer"
+            />
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div id="contentPagination" class="columns">
+        <div class="column is-two-thirds"></div>
+        <div class="box column is-one-third">
+          <b-pagination
+            order="is-centered"
+            :total="rackets.length"
+            :per-page="perPage"
+            :current.sync="current"
+            @change="scrollToTop"
+          ></b-pagination>
         </div>
       </div>
     </div>
@@ -63,12 +70,15 @@ export default {
   data() {
     return {
       loaded: false,
-      chosenRacket: null,
+      current: 1,
+      perPage: 42,
+      pageOfItems: [],
     };
   },
 
   methods: {
     ...mapActions("racket", ["getRackets"]),
+
     splitToThreeColumns(rackets) {
       let firstColumn = [];
       let secondColumn = [];
@@ -87,8 +97,12 @@ export default {
       return [firstColumn, secondColumn, thirdColumn];
     },
 
-    chooseRacket(racket) {
-      this.chosenRacket = racket;
+    onChangePage(pageOfItems) {
+      this.pageOfItems = pageOfItems;
+    },
+
+    scrollToTop() {
+      document.querySelector("#contentRackets").scrollTo(0, 0);
     },
   },
 
@@ -96,6 +110,15 @@ export default {
     ...mapState({
       rackets: (state) => state.racket.rackets,
     }),
+
+    paginatedRackets() {
+      let page_number = this.current - 1;
+
+      return this.rackets.slice(
+        page_number * this.perPage,
+        (page_number + 1) * this.perPage
+      );
+    },
   },
 
   mounted() {
@@ -105,37 +128,62 @@ export default {
 </script>
 
 <style scoped>
-#container {
-  display: flex; 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  display: flex;
   flex-flow: column;
+  position: relative;
   padding: 10px;
   height: 100%;
-  position: relative;
   word-wrap: anywhere;
   white-space: normal;
   background-color: green;
 }
 
+#divTitle {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .title {
-  font-size: 40px;
+  margin-bottom: 20px;
   padding: 10px;
+  font-size: 40px;
   text-align: left;
 }
 
-#content{
-  overflow: auto; 
-  height: 100%;
-}
-
-#contentOuter {
-  height: 100%; 
-  width: 100%;
+#contentRacketsWithPagination {
+  display: flex;
+  flex: 1 0 0px;
+  flex-flow: column;
   margin: 0;
+  padding: 0; 
+  width: 100%;
+  height: 77vh;
+  overflow: hidden;
 }
 
-#contentInner {
-  max-height: 100%; 
+#contentRackets {
+  flex: 1 0 0px;
+  margin: 10px;
+  /* min-height: 70%; */
+  background-color: white;
+  box-shadow: black;
   overflow: auto;
+}
+
+#contentPagination {
+  display: flex;
+  padding-bottom: 20px; 
+  padding-right: 5px;
+  width: 100%; 
 }
 
 #cols {

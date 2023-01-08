@@ -19,14 +19,20 @@ export default {
 </script>
 
 <style scoped>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #racketTile {
+  width: 100%;
+  height: fit-content;
+  min-height: 150px;
   background-color: white;
   border-color: black;
   border-style: solid;
   color: black;
-  width: 100%;
-  height: fit-content;
-  min-height: 150px;
   text-align: center;
 }
 
@@ -42,22 +48,21 @@ export default {
 }
 
 .racket-tile-name {
+  padding-left: 5px;
   flex: 1;
   text-align: left;
-  padding-left: 5px;
   font-weight: bold;
   font-size: 25px;
 }
 
 .racket-tile-price {
-  color: rgb(139, 139, 139);
+  margin-left: 10px;
   padding-right: 5px;
+  width: fit-content;
+  color: rgb(139, 139, 139);
   text-align: right;
   font-weight: bold;
   font-size: 25px;
-  width: fit-content;
-  margin-left: 10px;
   word-wrap: break-word;
-  float: right;
 }
 </style>
