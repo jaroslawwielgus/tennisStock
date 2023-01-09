@@ -7,10 +7,10 @@
       </template>
   
       <template #start>
-        <b-navbar-item :to="{ name: 'ballCatalog' }" tag="router-link">
+        <b-navbar-item :to="{ name: 'ballsCatalog' }" tag="router-link">
           <strong>Piłki</strong>
         </b-navbar-item>
-        <b-navbar-item :to="{ name: 'stringCatalog' }" tag="router-link">
+        <b-navbar-item :to="{ name: 'racketStringsCatalog' }" tag="router-link">
           <strong>Naciągi</strong>
         </b-navbar-item>
       </template>

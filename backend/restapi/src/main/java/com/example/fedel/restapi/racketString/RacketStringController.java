@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/racketStrings")
+@RequestMapping("/racket-strings")
 public class RacketStringController {
 
     @Autowired
