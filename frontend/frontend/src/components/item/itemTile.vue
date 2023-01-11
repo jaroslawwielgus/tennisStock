@@ -5,6 +5,10 @@
         <p class="tile-name">{{ item.name }}</p>
         <p class="tile-price">{{ item.price }} zł</p>
       </div>
+      <div class="tile-image">
+        <img id="i" v-bind:src="item.image" v-bind:alt="item.name">
+      </div>
+      <button @click="f">Kliknij mnie</button>
     </div>
   </div>
 </template>
@@ -15,10 +19,16 @@ export default {
     props: {
         item: { type: Object},
     },
+    methods: {
+      f() {
+        const im = document.getElementById('i');
+        console.log(im.src);
+      }
+    }
 };
 </script>
 
-<style scoped>
+<style>
 * {
   box-sizing: border-box;
   margin: 0;
@@ -64,5 +74,16 @@ export default {
   font-weight: bold;
   font-size: 25px;
   word-wrap: break-word;
+}
+
+.tile-image {
+  padding-top: 10px;
+  width: 100%;
+  height: 70%;
+}
+
+#i {
+  height: 200px;
+  object-fit: contain;
 }
 </style>

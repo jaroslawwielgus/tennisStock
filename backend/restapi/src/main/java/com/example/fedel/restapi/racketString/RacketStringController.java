@@ -43,6 +43,7 @@ public class RacketStringController {
         // System.out.println(racketString.getName());
         oldRacketString.setName(racketString.getName());
         oldRacketString.setDescription(racketString.getDescription());
+        oldRacketString.setImage(racketString.getImage());
         oldRacketString.setType(racketString.getType());
         oldRacketString.setDiameter(racketString.getDiameter());
         oldRacketString.setLength(racketString.getLength());
@@ -60,6 +61,9 @@ public class RacketStringController {
         }
         if (racketString.getDescription() != null) {
             oldRacketString.setDescription(racketString.getDescription());
+        }
+        if (racketString.getImage() != null) {
+            oldRacketString.setImage(racketString.getImage());
         }
         if (racketString.getType() != null) {
             oldRacketString.setType(racketString.getType());

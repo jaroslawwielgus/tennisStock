@@ -14,6 +14,7 @@ public class Racket {
 
     private String name;
     private String description;
+    private String image;
     private int strungWeight;
     private float length;
     private int headSize;

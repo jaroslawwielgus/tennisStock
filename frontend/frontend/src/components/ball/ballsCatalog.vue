@@ -71,7 +71,7 @@
       return {
         loaded: false,
         current: 1,
-        perPage: 42,
+        perPage: 21,
         pageOfItems: [],
       };
     },

@@ -43,6 +43,7 @@ public class RacketController {
         // System.out.println(racket.getName());
         oldRacket.setName(racket.getName());
         oldRacket.setDescription(racket.getDescription());
+        oldRacket.setImage(racket.getImage());
         oldRacket.setStrungWeight(racket.getStrungWeight());
         oldRacket.setLength(racket.getLength());
         oldRacket.setHeadSize(racket.getHeadSize());
@@ -62,6 +63,9 @@ public class RacketController {
         }
         if (racket.getDescription() != null) {
             oldRacket.setDescription(racket.getDescription());
+        }
+        if (racket.getImage() != null) {
+            oldRacket.setImage(racket.getImage());
         }
         if (racket.getStrungWeight() > 0) {
             oldRacket.setStrungWeight(racket.getStrungWeight());

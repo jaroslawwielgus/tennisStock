@@ -14,6 +14,7 @@
               :key="racket.name"
               :item="racket"
               style="cursor: pointer"
+              @click.native="moveToRacket(racket.id)"
             />
           </div>
           <div class="column">
@@ -24,6 +25,7 @@
               :key="racket.name"
               :item="racket"
               style="cursor: pointer"
+              @click.native="moveToRacket(racket.id)"
             />
           </div>
           <div class="column">
@@ -34,6 +36,7 @@
               :key="racket.name"
               :item="racket"
               style="cursor: pointer"
+              @click.native="moveToRacket(racket.id)"
             />
           </div>
         </div>
@@ -71,7 +74,7 @@ export default {
     return {
       loaded: false,
       current: 1,
-      perPage: 42,
+      perPage: 21,
       pageOfItems: [],
     };
   },
@@ -99,6 +102,10 @@ export default {
 
     onChangePage(pageOfItems) {
       this.pageOfItems = pageOfItems;
+    },
+
+    moveToRacket(racketId) {
+      this.$router.push(`/racket/${racketId}`);
     },
 
     scrollToTop() {

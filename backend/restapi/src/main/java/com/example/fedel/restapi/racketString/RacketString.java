@@ -14,6 +14,7 @@ public class RacketString {
 
     private String name;
     private String description;
+    private String image;
     private String type;
     private float diameter;
     private float length;

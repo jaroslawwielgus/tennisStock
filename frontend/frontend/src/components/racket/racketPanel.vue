@@ -5,8 +5,13 @@
 </template>
 
 <script>
+
+
 export default {
     name: "racketPanel",
+    methods: {
+      
+    }
 }
 </script>
 

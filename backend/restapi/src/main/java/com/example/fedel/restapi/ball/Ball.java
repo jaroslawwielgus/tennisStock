@@ -14,6 +14,7 @@ public class Ball {
 
     private String name;
     private String description;
+    private String image;
     private String surface;
     private String ballType;
     private String ballClass;

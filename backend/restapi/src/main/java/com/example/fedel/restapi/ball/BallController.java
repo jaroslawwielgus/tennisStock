@@ -43,6 +43,7 @@ public class BallController {
         // System.out.println(ball.getName());
         oldBall.setName(ball.getName());
         oldBall.setDescription(ball.getDescription());
+        oldBall.setImage(ball.getImage());
         oldBall.setSurface(ball.getSurface());
         oldBall.setBallType(ball.getBallType());
         oldBall.setBallClass(ball.getBallClass());
@@ -60,6 +61,9 @@ public class BallController {
         }
         if (ball.getDescription() != null) {
             oldBall.setDescription(ball.getDescription());
+        }
+        if (ball.getImage() != null) {
+            oldBall.setImage(ball.getImage());
         }
         if (ball.getSurface() != null) {
             oldBall.setSurface(ball.getSurface());
