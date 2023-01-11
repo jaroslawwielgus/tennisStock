@@ -45,9 +45,11 @@ export default {
 </script>
 
 <style scoped>
+@import '@/styles/colors.css';
+
 html {
   overflow: auto;
-  background-color: white;
+  background-color: var(--first-color);
 }
 
 html,
@@ -72,6 +74,6 @@ body {
   position: relative;
   word-wrap: anywhere;
   white-space: normal;
-  background-color: green;
+  background-color: var(--first-color);
 }
 </style>

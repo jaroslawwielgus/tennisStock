@@ -8,7 +8,6 @@
       <div class="tile-image">
         <img id="i" v-bind:src="item.image" v-bind:alt="item.name">
       </div>
-      <button @click="f">Kliknij mnie</button>
     </div>
   </div>
 </template>
@@ -19,12 +18,6 @@ export default {
     props: {
         item: { type: Object},
     },
-    methods: {
-      f() {
-        const im = document.getElementById('i');
-        console.log(im.src);
-      }
-    }
 };
 </script>
 
@@ -39,8 +32,8 @@ export default {
   width: 100%;
   height: fit-content;
   min-height: 150px;
-  background-color: white;
-  border-color: black;
+  background-color: var(--first-color);
+  border-color: var(--fourth-color);
   border-style: solid;
   color: black;
   text-align: center;
@@ -69,7 +62,6 @@ export default {
   margin-left: 10px;
   padding-right: 5px;
   width: fit-content;
-  color: rgb(139, 139, 139);
   text-align: right;
   font-weight: bold;
   font-size: 25px;

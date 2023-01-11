@@ -1,0 +1,31 @@
+:root {
+    --first-color: #f6f2e1;
+
+    --second-color: #ffffff;
+
+    --third-color: #1c4bab;
+
+    --fourth-color: #a8a8a8;
+
+    --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.pagination-link:focus {
+    border-color: var(--third-color);
+}
+
+.pagination-link.is-current {
+    background-color: var(--third-color);
+    border-color: var(--third-color);
+    color: var(--second-color);
+}
+
+.box {
+    background-color: var(--first-color);
+    filter: brightness(98%);
+}
+
+a.navbar-item:hover,
+a.navbar-item:focus {
+    color: var(--third-color);
+}

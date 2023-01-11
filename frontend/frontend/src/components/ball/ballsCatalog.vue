@@ -164,7 +164,7 @@
     height: 100%;
     word-wrap: anywhere;
     white-space: normal;
-    background-color: green;
+    /* background-color: rgb(196, 196, 196); */
   }
   
   #divTitle {
@@ -196,8 +196,8 @@
     flex: 1 0 0px;
     margin: 10px;
     /* min-height: 70%; */
-    background-color: white;
-    box-shadow: black;
+    background-color: var(--first-color);
+    box-shadow: var(--box-shadow);
     overflow: auto;
   }
   

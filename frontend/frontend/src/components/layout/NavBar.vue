@@ -25,7 +25,11 @@
   
   <style scoped>
   .navbar {
-    background-color: yellow;
+    background-color: var(--third-color);
+  }
+
+  a {
+    color: #fff;
   }
 
   img {

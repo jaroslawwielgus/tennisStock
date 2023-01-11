@@ -136,6 +136,9 @@ export default {
 #i {
   height: 400px;
   object-fit: contain;
+  filter: brightness(98%);
+  border-radius: 6px;
+  box-shadow: var(--box-shadow);
 }
 
 #divDescWithSpecs {
@@ -166,8 +169,8 @@ export default {
 }
 
 #divDescInner {
-  background-color: white;
-  box-shadow: black;
+  background-color: var(--first-color);
+  box-shadow: var(--box-shadow);
 }
 
 .desc-content {
@@ -177,8 +180,8 @@ export default {
 }
 
 #divSpecsInner {
-  background-color: white;
-  box-shadow: black;
+  background-color: var(--first-color);
+  box-shadow: var(--box-shadow);
   text-align: justify;
   color: black;
   font-size: 18px;
@@ -198,7 +201,7 @@ export default {
 }
 
 tr:nth-child(even) {
-  background-color: #DCDCDC;
+  background-color: #E1E5F6;
 }
 
 </style>
