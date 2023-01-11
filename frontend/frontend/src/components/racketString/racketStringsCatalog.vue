@@ -8,7 +8,7 @@
           <div id="cols" class="columns">
             <div class="column">
               <itemTile
-                v-for="racketString in this.splitToThreeColumns(
+                v-for="racketString in this.splitToFourColumns(
                   paginatedRacketStrings
                 )[0]"
                 :key="racketString.name"
@@ -18,7 +18,7 @@
             </div>
             <div class="column">
               <itemTile
-                v-for="racketString in this.splitToThreeColumns(
+                v-for="racketString in this.splitToFourColumns(
                   paginatedRacketStrings
                 )[1]"
                 :key="racketString.name"
@@ -28,9 +28,19 @@
             </div>
             <div class="column">
               <itemTile
-                v-for="racketString in this.splitToThreeColumns(
+                v-for="racketString in this.splitToFourColumns(
                   paginatedRacketStrings
                 )[2]"
+                :key="racketString.name"
+                :item="racketString"
+                style="cursor: pointer"
+              />
+            </div>
+            <div class="column">
+              <itemTile
+                v-for="racketString in this.splitToFourColumns(
+                  paginatedRacketStrings
+                )[3]"
                 :key="racketString.name"
                 :item="racketString"
                 style="cursor: pointer"
@@ -71,7 +81,7 @@
       return {
         loaded: false,
         current: 1,
-        perPage: 21,
+        perPage: 20,
         pageOfItems: [],
       };
     },
@@ -79,22 +89,25 @@
     methods: {
       ...mapActions("racketString", ["getRacketStrings"]),
   
-      splitToThreeColumns(racketStrings) {
+      splitToFourColumns(racketStrings) {
         let firstColumn = [];
         let secondColumn = [];
         let thirdColumn = [];
+        let fourthColumn = [];
   
         for (let i = 0; i < racketStrings.length; i++) {
-          if (i % 3 == 0) {
+          if (i % 4 == 0) {
             firstColumn.push(racketStrings[i]);
-          } else if (i % 3 == 1) {
+          } else if (i % 4 == 1) {
             secondColumn.push(racketStrings[i]);
-          } else {
+          } else if (i % 4 == 2) {
             thirdColumn.push(racketStrings[i]);
+          } else {
+            fourthColumn.push(racketStrings[i]);
           }
         }
   
-        return [firstColumn, secondColumn, thirdColumn];
+        return [firstColumn, secondColumn, thirdColumn, fourthColumn];
       },
   
       onChangePage(pageOfItems) {

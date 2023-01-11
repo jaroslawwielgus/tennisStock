@@ -8,7 +8,7 @@
           <div id="cols" class="columns">
             <div class="column">
               <itemTile
-                v-for="ball in this.splitToThreeColumns(
+                v-for="ball in this.splitToFourColumns(
                   paginatedBalls
                 )[0]"
                 :key="ball.name"
@@ -18,7 +18,7 @@
             </div>
             <div class="column">
               <itemTile
-                v-for="ball in this.splitToThreeColumns(
+                v-for="ball in this.splitToFourColumns(
                   paginatedBalls
                 )[1]"
                 :key="ball.name"
@@ -28,9 +28,19 @@
             </div>
             <div class="column">
               <itemTile
-                v-for="ball in this.splitToThreeColumns(
+                v-for="ball in this.splitToFourColumns(
                   paginatedBalls
                 )[2]"
+                :key="ball.name"
+                :item="ball"
+                style="cursor: pointer"
+              />
+            </div>
+            <div class="column">
+              <itemTile
+                v-for="ball in this.splitToFourColumns(
+                  paginatedBalls
+                )[3]"
                 :key="ball.name"
                 :item="ball"
                 style="cursor: pointer"
@@ -71,7 +81,7 @@
       return {
         loaded: false,
         current: 1,
-        perPage: 21,
+        perPage: 20,
         pageOfItems: [],
       };
     },
@@ -79,22 +89,25 @@
     methods: {
       ...mapActions("ball", ["getBalls"]),
   
-      splitToThreeColumns(balls) {
+      splitToFourColumns(balls) {
         let firstColumn = [];
         let secondColumn = [];
         let thirdColumn = [];
+        let fourthColumn = [];
   
         for (let i = 0; i < balls.length; i++) {
-          if (i % 3 == 0) {
+          if (i % 4 == 0) {
             firstColumn.push(balls[i]);
-          } else if (i % 3 == 1) {
+          } else if (i % 4 == 1) {
             secondColumn.push(balls[i]);
-          } else {
+          } else if (i % 4 == 2) {
             thirdColumn.push(balls[i]);
+          } else {
+            fourthColumn.push(balls[i]);
           }
         }
   
-        return [firstColumn, secondColumn, thirdColumn];
+        return [firstColumn, secondColumn, thirdColumn, fourthColumn];
       },
   
       onChangePage(pageOfItems) {
