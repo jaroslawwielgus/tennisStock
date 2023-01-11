@@ -14,6 +14,7 @@
                 :key="racketString.name"
                 :item="racketString"
                 style="cursor: pointer"
+                @click.native="moveToRacketString(racketString.id)"
               />
             </div>
             <div class="column">
@@ -24,6 +25,7 @@
                 :key="racketString.name"
                 :item="racketString"
                 style="cursor: pointer"
+                @click.native="moveToRacketString(racketString.id)"
               />
             </div>
             <div class="column">
@@ -34,6 +36,7 @@
                 :key="racketString.name"
                 :item="racketString"
                 style="cursor: pointer"
+                @click.native="moveToRacketString(racketString.id)"
               />
             </div>
             <div class="column">
@@ -44,6 +47,7 @@
                 :key="racketString.name"
                 :item="racketString"
                 style="cursor: pointer"
+                @click.native="moveToRacketString(racketString.id)"
               />
             </div>
           </div>
@@ -113,6 +117,10 @@
       onChangePage(pageOfItems) {
         this.pageOfItems = pageOfItems;
       },
+
+      moveToRacketString(racketStringId) {
+        this.$router.push(`/racket-string/${racketStringId}`);
+      },
   
       scrollToTop() {
         document.querySelector("#contentRacketStrings").scrollTo(0, 0);
@@ -135,6 +143,7 @@
     },
   
     mounted() {
+      document.title = "Naciągi - TennisStock";
       this.getRacketStrings().then(() => (this.loaded = true));
     },
   };

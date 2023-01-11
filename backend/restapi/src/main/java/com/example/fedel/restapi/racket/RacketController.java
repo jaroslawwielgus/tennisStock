@@ -45,6 +45,7 @@ public class RacketController {
         oldRacket.setDescription(racket.getDescription());
         oldRacket.setImage(racket.getImage());
         oldRacket.setStrungWeight(racket.getStrungWeight());
+        oldRacket.setBalance(racket.getBalance());
         oldRacket.setLength(racket.getLength());
         oldRacket.setHeadSize(racket.getHeadSize());
         oldRacket.setStringPattern(racket.getStringPattern());
@@ -69,6 +70,9 @@ public class RacketController {
         }
         if (racket.getStrungWeight() > 0) {
             oldRacket.setStrungWeight(racket.getStrungWeight());
+        }
+        if (racket.getBalance() > 0) {
+            oldRacket.setBalance(racket.getBalance());
         }
         if (racket.getLength() > 0) {
             oldRacket.setLength(racket.getLength());

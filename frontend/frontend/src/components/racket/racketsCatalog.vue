@@ -143,6 +143,7 @@ export default {
   },
 
   mounted() {
+    document.title = "Rakiety - TennisStock";
     this.getRackets().then(() => (this.loaded = true));
   },
 };

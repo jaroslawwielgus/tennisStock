@@ -2,7 +2,7 @@ import { api } from "@/services/api";
 
 export default {
     fetchBall(ballId) {
-        return api.get(`ball/${ballId}`).then((response) => response.data);
+        return api.get(`balls/${ballId}`).then((response) => response.data);
     },
     postBall(data) {
         return api.post("ball", data).then((response) => response.data);

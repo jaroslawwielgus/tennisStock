@@ -2,7 +2,7 @@ import { api } from "@/services/api";
 
 export default {
     fetchRacket(racketId) {
-        return api.get(`racket/${racketId}`).then((response) => response.data);
+        return api.get(`rackets/${racketId}`).then((response) => response.data);
     },
     postRacket(data) {
         return api.post("racket", data).then((response) => response.data);

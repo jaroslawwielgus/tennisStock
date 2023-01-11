@@ -14,6 +14,7 @@
                 :key="ball.name"
                 :item="ball"
                 style="cursor: pointer"
+                @click.native="moveToBall(ball.id)"
               />
             </div>
             <div class="column">
@@ -24,6 +25,7 @@
                 :key="ball.name"
                 :item="ball"
                 style="cursor: pointer"
+                @click.native="moveToBall(ball.id)"
               />
             </div>
             <div class="column">
@@ -34,6 +36,7 @@
                 :key="ball.name"
                 :item="ball"
                 style="cursor: pointer"
+                @click.native="moveToBall(ball.id)"
               />
             </div>
             <div class="column">
@@ -44,6 +47,7 @@
                 :key="ball.name"
                 :item="ball"
                 style="cursor: pointer"
+                @click.native="moveToBall(ball.id)"
               />
             </div>
           </div>
@@ -113,6 +117,10 @@
       onChangePage(pageOfItems) {
         this.pageOfItems = pageOfItems;
       },
+
+      moveToBall(ballId) {
+        this.$router.push(`/ball/${ballId}`);
+      },
   
       scrollToTop() {
         document.querySelector("#contentBalls").scrollTo(0, 0);
@@ -135,6 +143,7 @@
     },
   
     mounted() {
+      document.title = "Piłki - TennisStock";
       this.getBalls().then(() => (this.loaded = true));
     },
   };
