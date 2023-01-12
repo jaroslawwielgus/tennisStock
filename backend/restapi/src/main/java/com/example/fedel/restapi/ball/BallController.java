@@ -33,65 +33,84 @@ public class BallController {
     }
 
     @PostMapping("")
-    Ball create(@RequestBody Ball ball) {
-        return repository.save(ball);
+    int create(@RequestBody Ball ball) {
+        if (ball.getQuantity() > 0 && ball.getPrice() > 0) {
+            repository.save(ball);
+            return 1;
+        } else {
+            return -1;
+        }
     }
 
     @PutMapping("/{id}")
-    Ball update(@PathVariable int id, @RequestBody Ball ball) {
+    int update(@PathVariable int id, @RequestBody Ball ball) {
         Ball oldBall = repository.findById(id).orElse(null);
-        // System.out.println(ball.getName());
-        oldBall.setName(ball.getName());
-        oldBall.setDescription(ball.getDescription());
-        oldBall.setImage(ball.getImage());
-        oldBall.setSurface(ball.getSurface());
-        oldBall.setBallType(ball.getBallType());
-        oldBall.setBallClass(ball.getBallClass());
-        oldBall.setQuantity(ball.getQuantity());
-        oldBall.setPrice(ball.getPrice());
-        return repository.save(oldBall);
+        if (oldBall != null && ball.getPrice() > 0
+                && ball.getQuantity() > 0) {
+            oldBall.setName(ball.getName());
+            oldBall.setDescription(ball.getDescription());
+            oldBall.setImage(ball.getImage());
+            oldBall.setSurface(ball.getSurface());
+            oldBall.setBallType(ball.getBallType());
+            oldBall.setBallClass(ball.getBallClass());
+            oldBall.setQuantity(ball.getQuantity());
+            oldBall.setPrice(ball.getPrice());
+            repository.save(oldBall);
+            return 1;
+        } else {
+            return -1;
+        }
     }
 
     @PatchMapping("/{id}")
-    Ball partiallyUpdate(@PathVariable int id, @RequestBody Ball ball) {
+    int partiallyUpdate(@PathVariable int id, @RequestBody Ball ball) {
         Ball oldBall = repository.findById(id).orElse(null);
-        // System.out.println(ball.getName());
-        if (ball.getName() != null) {
-            oldBall.setName(ball.getName());
+        if (oldBall != null) {
+            if (ball.getName() != null) {
+                oldBall.setName(ball.getName());
+            }
+            if (ball.getDescription() != null) {
+                oldBall.setDescription(ball.getDescription());
+            }
+            if (ball.getImage() != null) {
+                oldBall.setImage(ball.getImage());
+            }
+            if (ball.getSurface() != null) {
+                oldBall.setSurface(ball.getSurface());
+            }
+            if (ball.getBallType() != null) {
+                oldBall.setBallType(ball.getBallType());
+            }
+            if (ball.getBallClass() != null) {
+                oldBall.setBallClass(ball.getBallClass());
+            }
+            if (ball.getQuantity() > 0) {
+                oldBall.setQuantity(ball.getQuantity());
+            }
+            if (ball.getPrice() > 0) {
+                oldBall.setPrice(ball.getPrice());
+            }
+            repository.save(oldBall);
+            return 1;
+        } else {
+            return -1;
         }
-        if (ball.getDescription() != null) {
-            oldBall.setDescription(ball.getDescription());
-        }
-        if (ball.getImage() != null) {
-            oldBall.setImage(ball.getImage());
-        }
-        if (ball.getSurface() != null) {
-            oldBall.setSurface(ball.getSurface());
-        }
-        if (ball.getBallType() != null) {
-            oldBall.setBallType(ball.getBallType());
-        }
-        if (ball.getBallClass() != null) {
-            oldBall.setBallClass(ball.getBallClass());
-        }
-        if (ball.getQuantity() > 0) {
-            oldBall.setQuantity(ball.getQuantity());
-        }
-        if (ball.getPrice() > 0) {
-            oldBall.setPrice(ball.getPrice());
-        }
-        return repository.save(oldBall);
     }
 
     @DeleteMapping("")
-    Integer destroyAll() {
+    int destroyAll() {
         repository.deleteAll();
         return 1;
     }
 
     @DeleteMapping("/{id}")
-    Integer destroy(@PathVariable int id) {
-        repository.deleteById(id);
-        return id;
+    int destroy(@PathVariable int id) {
+        Ball oldBall = repository.findById(id).orElse(null);
+        if (oldBall != null) {
+            repository.deleteById(id);
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }

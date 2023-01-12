@@ -6,8 +6,9 @@
         <p class="tile-price">{{ item.price }} zł</p>
       </div>
       <div class="tile-image">
-        <img id="i" v-bind:src="item.image" v-bind:alt="item.name">
+        <img id="i" src="../../assets/ball/Wilson-Roland-Garros-1.jpg" v-bind:alt="item.name">
       </div>
+      <button @click="f">Kliknij mnie</button>
     </div>
   </div>
 </template>
@@ -18,6 +19,12 @@ export default {
     props: {
         item: { type: Object},
     },
+    methods: {
+      f() {
+        const photo = document.getElementById('i');
+        console.log(photo.src);
+      }
+    }
 };
 </script>
 

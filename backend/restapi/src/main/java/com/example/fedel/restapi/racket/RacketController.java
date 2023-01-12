@@ -33,77 +33,100 @@ public class RacketController {
     }
 
     @PostMapping("")
-    Racket create(@RequestBody Racket racket) {
-        return repository.save(racket);
+    int create(@RequestBody Racket racket) {
+        if (racket.getStrungWeight() > 0 && racket.getBalance() > 0
+                && racket.getLength() > 0 && racket.getHeadSize() > 0
+                && racket.getStiffness() > 0 && racket.getPrice() > 0) {
+            repository.save(racket);
+            return 1;
+        } else {
+            return -1;
+        }
     }
 
     @PutMapping("/{id}")
-    Racket update(@PathVariable int id, @RequestBody Racket racket) {
+    int update(@PathVariable int id, @RequestBody Racket racket) {
         Racket oldRacket = repository.findById(id).orElse(null);
-        // System.out.println(racket.getName());
-        oldRacket.setName(racket.getName());
-        oldRacket.setDescription(racket.getDescription());
-        oldRacket.setImage(racket.getImage());
-        oldRacket.setStrungWeight(racket.getStrungWeight());
-        oldRacket.setBalance(racket.getBalance());
-        oldRacket.setLength(racket.getLength());
-        oldRacket.setHeadSize(racket.getHeadSize());
-        oldRacket.setStringPattern(racket.getStringPattern());
-        oldRacket.setBeamWidth(racket.getBeamWidth());
-        oldRacket.setStiffness(racket.getStiffness());
-        oldRacket.setPrice(racket.getPrice());
-        return repository.save(oldRacket);
+        if (oldRacket != null && racket.getStrungWeight() > 0
+                && racket.getBalance() > 0 && racket.getLength() > 0
+                && racket.getHeadSize() > 0 && racket.getStiffness() > 0
+                && racket.getPrice() > 0) {
+            oldRacket.setName(racket.getName());
+            oldRacket.setDescription(racket.getDescription());
+            oldRacket.setImage(racket.getImage());
+            oldRacket.setStrungWeight(racket.getStrungWeight());
+            oldRacket.setBalance(racket.getBalance());
+            oldRacket.setLength(racket.getLength());
+            oldRacket.setHeadSize(racket.getHeadSize());
+            oldRacket.setStringPattern(racket.getStringPattern());
+            oldRacket.setBeamWidth(racket.getBeamWidth());
+            oldRacket.setStiffness(racket.getStiffness());
+            oldRacket.setPrice(racket.getPrice());
+            repository.save(oldRacket);
+            return 1;
+        } else {
+            return -1;
+        }
     }
 
     @PatchMapping("/{id}")
-    Racket partiallyUpdate(@PathVariable int id, @RequestBody Racket racket) {
+    int partiallyUpdate(@PathVariable int id, @RequestBody Racket racket) {
         Racket oldRacket = repository.findById(id).orElse(null);
-        // System.out.println(racket.getName());
-        if (racket.getName() != null) {
-            oldRacket.setName(racket.getName());
+        if (oldRacket != null) {
+            if (racket.getName() != null) {
+                oldRacket.setName(racket.getName());
+            }
+            if (racket.getDescription() != null) {
+                oldRacket.setDescription(racket.getDescription());
+            }
+            if (racket.getImage() != null) {
+                oldRacket.setImage(racket.getImage());
+            }
+            if (racket.getStrungWeight() > 0) {
+                oldRacket.setStrungWeight(racket.getStrungWeight());
+            }
+            if (racket.getBalance() > 0) {
+                oldRacket.setBalance(racket.getBalance());
+            }
+            if (racket.getLength() > 0) {
+                oldRacket.setLength(racket.getLength());
+            }
+            if (racket.getHeadSize() > 0) {
+                oldRacket.setHeadSize(racket.getHeadSize());
+            }
+            if (racket.getStringPattern() != null) {
+                oldRacket.setStringPattern(racket.getStringPattern());
+            }
+            if (racket.getBeamWidth() != null) {
+                oldRacket.setBeamWidth(racket.getBeamWidth());
+            }
+            if (racket.getStiffness() > 0) {
+                oldRacket.setStiffness(racket.getStiffness());
+            }
+            if (racket.getPrice() > 0) {
+                oldRacket.setPrice(racket.getPrice());
+            }
+            repository.save(oldRacket);
+            return 1;
+        } else {
+            return -1;
         }
-        if (racket.getDescription() != null) {
-            oldRacket.setDescription(racket.getDescription());
-        }
-        if (racket.getImage() != null) {
-            oldRacket.setImage(racket.getImage());
-        }
-        if (racket.getStrungWeight() > 0) {
-            oldRacket.setStrungWeight(racket.getStrungWeight());
-        }
-        if (racket.getBalance() > 0) {
-            oldRacket.setBalance(racket.getBalance());
-        }
-        if (racket.getLength() > 0) {
-            oldRacket.setLength(racket.getLength());
-        }
-        if (racket.getHeadSize() > 0) {
-            oldRacket.setHeadSize(racket.getHeadSize());
-        }
-        if (racket.getStringPattern() != null) {
-            oldRacket.setStringPattern(racket.getStringPattern());
-        }
-        if (racket.getBeamWidth() != null) {
-            oldRacket.setBeamWidth(racket.getBeamWidth());
-        }
-        if (racket.getStiffness() > 0) {
-            oldRacket.setStiffness(racket.getStiffness());
-        }
-        if (racket.getPrice() > 0) {
-            oldRacket.setPrice(racket.getPrice());
-        }
-        return repository.save(oldRacket);
     }
 
     @DeleteMapping("")
-    Integer destroyAll() {
+    int destroyAll() {
         repository.deleteAll();
         return 1;
     }
 
     @DeleteMapping("/{id}")
-    Integer destroy(@PathVariable int id) {
-        repository.deleteById(id);
-        return id;
+    int destroy(@PathVariable int id) {
+        Racket oldRacket = repository.findById(id).orElse(null);
+        if (oldRacket != null) {
+            repository.deleteById(id);
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }
