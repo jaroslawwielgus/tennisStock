@@ -105,7 +105,7 @@ export default {
   padding: 10px;
   font-size: 40px;
   font-weight: 600;
-  color: #363636;
+  color: var(--second-color);
   line-height: 1.125;
 }
 .name {
@@ -152,7 +152,7 @@ export default {
   text-align: left;
   font-size: 32px;
   font-weight: 600;
-  color: #363636;
+  color: var(--second-color);
   line-height: 1.125;
 }
 
@@ -189,7 +189,7 @@ export default {
 }
 
 tr:nth-child(even) {
-  background-color: #E1E5F6;
+  background-color: var(--fourth-color);
 }
 
 </style>

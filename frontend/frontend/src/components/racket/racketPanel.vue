@@ -175,7 +175,7 @@ export default {
 
 .desc-content {
   text-align: justify;
-  color: black;
+  color: #000;
   font-size: 18px;
 }
 
@@ -183,7 +183,7 @@ export default {
   background-color: var(--first-color);
   box-shadow: var(--box-shadow);
   text-align: justify;
-  color: black;
+  color: #000;
   font-size: 18px;
 }
 
@@ -201,7 +201,7 @@ export default {
 }
 
 tr:nth-child(even) {
-  background-color: #E1E5F6;
+  background-color: var(--fourth-color);
 }
 
 </style>

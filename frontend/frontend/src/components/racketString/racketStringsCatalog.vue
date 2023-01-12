@@ -164,7 +164,6 @@
     height: 100%;
     word-wrap: anywhere;
     white-space: normal;
-    background-color: green;
   }
   
   #divTitle {

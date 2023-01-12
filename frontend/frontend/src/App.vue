@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 @import '@/styles/colors.css';
 
 html {
