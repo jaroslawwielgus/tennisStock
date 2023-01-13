@@ -1,19 +1,8 @@
 <template>
   <div id="content">
-    <div id="divTitle">
-      <p class="name n-p">{{ racket.name }}</p>
-      <p class="price n-p">{{ racket.price }} zł</p>
-    </div>
-    <div id="divImage">
-      <img id="i" v-bind:src="racket.image" v-bind:alt="racket.name">
-    </div>
+    <itemPanelNamePriceImage :item="racket"/>
     <div id="divDescWithSpecs">
-      <div id="divDescOuter">
-        <p class="d-s">Opis</p>
-        <div id="divDescInner" class="box">
-          <p class="desc-content">{{ racket.description }}</p>
-        </div>
-      </div>
+      <itemPanelDescription :item="racket"/>
       <div id="divSpecsOuter">
         <p class="d-s">Specyfikacja</p>
         <div id="divSpecsInner" class="box">
@@ -55,9 +44,15 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
+import itemPanelNamePriceImage from '../item/itemPanelNamePriceImage.vue';
+import itemPanelDescription from '../item/itemPanelDescription.vue';
 
 export default {
   name: "racketPanel",
+  components: {
+    itemPanelNamePriceImage,
+    itemPanelDescription
+  },
   data() {
     return {
       loaded: false,
@@ -102,30 +97,6 @@ export default {
   padding: 10px;
   height: 100%;
   text-align: center;
-  /* background-color: green; */
-}
-
-#divTitle {
-  display: flex;
-  margin-bottom: 20px;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.n-p {
-  padding: 10px;
-  font-size: 40px;
-  font-weight: 600;
-  color: #363636;
-  line-height: 1.125;
-}
-.name {
-  text-align: left;
-}
-
-.price {
-  text-align: right;
 }
 
 #divImage {
@@ -149,11 +120,6 @@ export default {
   justify-content: space-between;
 }
 
-#divDescOuter {
-  width: 75%;
-  padding: 10px;
-}
-
 #divSpecsOuter {
   width: 25%;
   padding: 10px;
@@ -166,17 +132,6 @@ export default {
   font-weight: 600;
   color: #363636;
   line-height: 1.125;
-}
-
-#divDescInner {
-  background-color: var(--first-color);
-  box-shadow: var(--box-shadow);
-}
-
-.desc-content {
-  text-align: justify;
-  color: #000;
-  font-size: 18px;
 }
 
 #divSpecsInner {

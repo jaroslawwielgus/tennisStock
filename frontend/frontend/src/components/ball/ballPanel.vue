@@ -1,34 +1,23 @@
 <template>
   <div id="content">
-    <div id="divTitle">
-      <p class="name n-p">{{ ball.name }}</p>
-      <p class="price n-p">{{ ball.price }} zł</p>
-    </div>
-    <div id="divImage">
-      <img id="i" v-bind:src="ball.image" v-bind:alt="ball.name">
-    </div>
+   <itemPanelNamePriceImage :item="ball"/>
     <div id="divDescWithSpecs">
-      <div id="divDescOuter">
-        <p class="d-s">Opis</p>
-        <div id="divDescInner" class="box">
-          <p class="desc-content">{{ ball.description }}</p>
-        </div>
-      </div>
+      <itemPanelDescription :item="ball"/>
       <div id="divSpecsOuter">
         <p class="d-s">Specyfikacja</p>
         <div id="divSpecsInner" class="box">
           <table id="tab">
             <tr>
               <td id="col1">Nawierzchnia: </td>
-              <td id="col2">{{ ball.surface }}</td>
+              <td id="col2" class="enum">{{ ball.surface }}</td>
             </tr>
             <tr>
               <td id="col1">Typ: </td>
-              <td id="col2">{{ ball.ballType }}</td>
+              <td id="col2" class="enum">{{ ball.ballType }}</td>
             </tr>
             <tr>
               <td id="col1">Klasa: </td>
-              <td id="col2">{{ ball.ballClass }}</td>
+              <td id="col2" class="enum">{{ ball.ballClass }}</td>
             </tr>
             <tr>
               <td id="col1">Liczba piłek: </td>
@@ -43,9 +32,15 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
+import itemPanelNamePriceImage from '../item/itemPanelNamePriceImage.vue'
+import itemPanelDescription from '../item/itemPanelDescription.vue'
 
 export default {
   name: "ballPanel",
+  components: {
+    itemPanelNamePriceImage,
+    itemPanelDescription,
+  },
   data() {
     return {
       loaded: false,
@@ -93,42 +88,6 @@ export default {
   /* background-color: green; */
 }
 
-#divTitle {
-  display: flex;
-  margin-bottom: 20px;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.n-p {
-  padding: 10px;
-  font-size: 40px;
-  font-weight: 600;
-  color: var(--second-color);
-  line-height: 1.125;
-}
-.name {
-  text-align: left;
-}
-
-.price {
-  text-align: right;
-}
-
-#divImage {
-  padding-top: 2px;
-  width: 100%;
-}
-
-#i {
-  height: 400px;
-  object-fit: contain;
-  filter: brightness(98%);
-  border-radius: 6px;
-  box-shadow: var(--box-shadow);
-}
-
 #divDescWithSpecs {
   display: flex;
   margin-top: 10px;
@@ -137,16 +96,10 @@ export default {
   justify-content: space-between;
 }
 
-#divDescOuter {
-  width: 75%;
-  padding: 10px;
-}
-
 #divSpecsOuter {
   width: 25%;
   padding: 10px;
 }
-
 .d-s {
   padding: 10px;
   text-align: left;
@@ -154,17 +107,6 @@ export default {
   font-weight: 600;
   color: var(--second-color);
   line-height: 1.125;
-}
-
-#divDescInner {
-  background-color: var(--first-color);
-  box-shadow: var(--box-shadow);
-}
-
-.desc-content {
-  text-align: justify;
-  color: #000;
-  font-size: 18px;
 }
 
 #divSpecsInner {
@@ -186,6 +128,10 @@ export default {
 
 #col2 {
   padding-left: 5px;
+}
+
+.enum {
+  text-transform: lowercase;
 }
 
 tr:nth-child(even) {
