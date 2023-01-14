@@ -3,7 +3,7 @@
     <div class="tile-container">
       <div class="tile-name-with-price">
         <p class="tile-name">{{ item.name }}</p>
-        <p class="tile-price">{{ item.price }} zł</p>
+        <p class="tile-price">{{ item.price.toFixed(2) }} zł</p>
       </div>
       <div class="tile-image">
         <img id="i" v-bind:src="item.image" v-bind:alt="item.name">
@@ -55,7 +55,7 @@ export default {
   flex: 1;
   text-align: left;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 23px;
 }
 
 .tile-price {
@@ -64,7 +64,7 @@ export default {
   width: fit-content;
   text-align: right;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 23px;
   word-wrap: break-word;
 }
 

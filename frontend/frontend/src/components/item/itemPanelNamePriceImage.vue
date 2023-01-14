@@ -2,7 +2,7 @@
   <div>
     <div id="divTitle">
       <p class="name n-p">{{ item.name }}</p>
-      <p class="price n-p">{{ item.price }} zł</p>
+      <p class="price n-p">{{ item?.price?.toFixed(2) }} zł</p>
     </div>
     <div id="divImage">
       <img id="i" v-bind:src="item.image" v-bind:alt="item.name">

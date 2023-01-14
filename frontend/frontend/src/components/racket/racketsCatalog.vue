@@ -177,7 +177,7 @@ export default {
 .title {
   margin-bottom: 20px;
   padding: 10px;
-  font-size: 40px;
+  font-size: 36px;
   text-align: left;
 }
 
