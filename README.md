@@ -10,6 +10,17 @@ Tennis Stock App enables:
 Data of rackets, balls and tennis strings are stored in MySQL database which can be run in a Docker container.
 To download the database image, run the following command:
 `docker pull mysql`.
+To start mysql server instance use this:
+
+
+
+VS Code extensions to install:
+Spring Boot Extension Pack
+Project Manager for Java
+Lombok Annotations Support for VS Code
+
+
+
 
 
 
