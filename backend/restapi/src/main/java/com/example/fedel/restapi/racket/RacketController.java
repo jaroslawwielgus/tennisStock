@@ -33,12 +33,18 @@ public class RacketController {
     }
 
     @PostMapping("")
-    int create(@RequestBody Racket racket) {
-        if (racket.getStrungWeight() > 0 && racket.getBalance() > 0
-                && racket.getLength() > 0 && racket.getHeadSize() > 0
-                && racket.getStiffness() > 0 && racket.getPrice() > 0) {
-            repository.save(racket);
-            return 1;
+    int create(@RequestBody List<Racket> rackets) {
+        int recordsNumber = 0;
+        for (Racket racket : rackets) {
+            if (racket.getStrungWeight() > 0 && racket.getBalance() > 0
+                    && racket.getLength() > 0 && racket.getHeadSize() > 0
+                    && racket.getStiffness() > 0 && racket.getPrice() > 0) {
+                repository.save(racket);
+                recordsNumber++;
+            }
+        }
+        if (recordsNumber > 0) {
+            return recordsNumber;
         } else {
             return -1;
         }

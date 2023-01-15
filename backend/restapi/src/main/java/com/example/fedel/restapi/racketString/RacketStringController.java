@@ -33,11 +33,17 @@ public class RacketStringController {
     }
 
     @PostMapping("")
-    int create(@RequestBody RacketString racketString) {
-        if (racketString.getDiameter() > 0 && racketString.getLength() > 0
-                && racketString.getPrice() > 0) {
-            repository.save(racketString);
-            return 1;
+    int create(@RequestBody List<RacketString> racketStrings) {
+        int recordsNumber = 0;
+        for (RacketString racketString : racketStrings) {
+            if (racketString.getDiameter() > 0 && racketString.getLength() > 0
+                    && racketString.getPrice() > 0) {
+                repository.save(racketString);
+                recordsNumber++;
+            }
+        }
+        if (recordsNumber > 0) {
+            return recordsNumber;
         } else {
             return -1;
         }

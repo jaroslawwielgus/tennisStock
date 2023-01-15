@@ -33,10 +33,16 @@ public class BallController {
     }
 
     @PostMapping("")
-    int create(@RequestBody Ball ball) {
-        if (ball.getQuantity() > 0 && ball.getPrice() > 0) {
-            repository.save(ball);
-            return 1;
+    int create(@RequestBody List<Ball> balls) {
+        int recordsNumber = 0;
+        for (Ball ball : balls) {
+            if (ball.getQuantity() > 0 && ball.getPrice() > 0) {
+                repository.save(ball);
+                recordsNumber++;
+            }
+        }
+        if (recordsNumber > 0) {
+            return recordsNumber;
         } else {
             return -1;
         }
