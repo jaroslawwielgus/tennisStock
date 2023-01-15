@@ -1,10 +1,10 @@
 <template>
-    <div id="content">
+    <div id="contentCatalog">
       <div id="divTitle">
         <p class="title">Katalog piłek</p>
       </div>
-      <div id="contentBallsWithPagination" v-if="loaded">
-        <div id="contentBalls" class="box">
+      <div id="contentItemsWithPagination" v-if="loaded">
+        <div id="contentItems" class="box">
           <div id="cols" class="columns">
             <div class="column">
               <itemTile
@@ -123,7 +123,7 @@
       },
   
       scrollToTop() {
-        document.querySelector("#contentBalls").scrollTo(0, 0);
+        document.querySelector("#contentItems").scrollTo(0, 0);
       },
     },
   
@@ -149,14 +149,8 @@
   };
   </script>
   
-  <style scoped>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #content {
+  <style>
+  #contentCatalog {
     display: flex;
     flex-flow: column;
     position: relative;
@@ -164,14 +158,6 @@
     height: 100%;
     word-wrap: anywhere;
     white-space: normal;
-    /* background-color: rgb(196, 196, 196); */
-  }
-  
-  #divTitle {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
   }
   
   .title {
@@ -181,7 +167,7 @@
     text-align: left;
   }
   
-  #contentBallsWithPagination {
+  #contentItemsWithPagination {
     display: flex;
     flex: 1 0 0px;
     flex-flow: column;
@@ -192,24 +178,32 @@
     overflow: hidden;
   }
   
-  #contentBalls {
+  #contentItems {
     flex: 1 0 0px;
     margin: 10px;
     /* min-height: 70%; */
-    background-color: var(--first-color);
     box-shadow: var(--box-shadow);
     overflow: auto;
   }
   
   #contentPagination {
     display: flex;
-    padding-bottom: 20px; 
+    padding: 20px 0; 
     padding-right: 5px;
     width: 100%; 
   }
   
   #cols {
     margin: 0;
+  }
+  </style>
+
+  <style scoped>
+  #divTitle {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
   }
   </style>
   

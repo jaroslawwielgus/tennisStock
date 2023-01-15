@@ -21,11 +21,10 @@ export default {
 };
 </script>
 
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+<style scoped>
+#i {
+  height: 200px;
+  object-fit: contain;
 }
 
 #tile {
@@ -72,10 +71,5 @@ export default {
   padding-top: 10px;
   width: 100%;
   height: 70%;
-}
-
-#i {
-  height: 200px;
-  object-fit: contain;
 }
 </style>

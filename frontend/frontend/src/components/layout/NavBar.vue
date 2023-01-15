@@ -2,7 +2,7 @@
     <b-navbar>
       <template #brand>
         <b-navbar-item tag="router-link" :to="{ name: 'rackets' }">
-          <img src="../../assets/logo.png" alt="Logo"/>
+          <img id="i" src="../../assets/logo.png" alt="Logo"/>
         </b-navbar-item>
       </template>
   
@@ -32,7 +32,12 @@
     color: #fff;
   }
 
-  img {
+  a.navbar-item:hover,
+  a.navbar-item:focus {
+      color: var(--third-color);
+  }
+
+  #i {
     transform: scale(1.5); 
     margin-left: 10px; 
     margin-right: 10px;

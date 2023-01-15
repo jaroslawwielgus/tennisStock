@@ -1,5 +1,5 @@
 <template>
-  <div id="content">
+  <div id="contentPanel">
     <itemPanelNamePriceImage :item="racketString"/>
     <div id="divDescWithSpecs">
       <itemPanelDescription :item="racketString"/>
@@ -71,71 +71,4 @@ export default {
 }
 </script>
 
-<style scoped>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-#content {
-  display: flex;
-  flex-flow: column;
-  position: relative;
-  padding: 10px;
-  height: 100%;
-  text-align: center;
-}
-
-#divDescWithSpecs {
-  display: flex;
-  margin-top: 10px;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#divSpecsOuter {
-  width: 25%;
-  padding: 10px;
-}
-
-.d-s {
-  padding: 10px;
-  text-align: left;
-  font-size: 32px;
-  font-weight: 600;
-  color: var(--second-color);
-  line-height: 1.125;
-}
-
-#divSpecsInner {
-  background-color: var(--first-color);
-  box-shadow: var(--box-shadow);
-  text-align: justify;
-  color: black;
-  font-size: 18px;
-}
-
-#tab {
-  width: 100%;
-}
-
-#col1 {
-  padding-left: 5px;
-  width: 50%;
-}
-
-#col2 {
-  padding-left: 5px;
-}
-
-.enum {
-  text-transform: lowercase;
-}
-
-tr:nth-child(even) {
-  background-color: var(--fourth-color);
-}
-
-</style>
+<style></style>

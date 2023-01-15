@@ -17,24 +17,9 @@
   </script>
   
   <style scoped>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
   #divDescOuter {
     width: 75%;
     padding: 10px;
-  }
-  
-  .d-s {
-    padding: 10px;
-    text-align: left;
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--second-color);
-    line-height: 1.125;
   }
   
   #divDescInner {

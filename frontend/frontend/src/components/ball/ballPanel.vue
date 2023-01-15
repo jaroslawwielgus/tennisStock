@@ -1,5 +1,5 @@
 <template>
-  <div id="content">
+  <div id="contentPanel">
    <itemPanelNamePriceImage :item="ball"/>
     <div id="divDescWithSpecs">
       <itemPanelDescription :item="ball"/>
@@ -71,21 +71,20 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-#content {
+#contentPanel {
   display: flex;
   flex-flow: column;
   position: relative;
   padding: 10px;
   height: 100%;
   text-align: center;
-  /* background-color: green; */
 }
 
 #divDescWithSpecs {

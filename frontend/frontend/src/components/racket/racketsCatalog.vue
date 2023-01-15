@@ -1,10 +1,10 @@
 <template>
-  <div id="content">
+  <div id="contentCatalog">
     <div id="divTitle">
       <p class="title">Katalog rakiet</p>
     </div>
-    <div id="contentRacketsWithPagination" v-if="loaded">
-      <div id="contentRackets" class="box">
+    <div id="contentItemsWithPagination" v-if="loaded">
+      <div id="contentItems" class="box">
         <div id="cols" class="columns">
           <div class="column">
             <itemTile
@@ -123,7 +123,7 @@ export default {
     },
 
     scrollToTop() {
-      document.querySelector("#contentRackets").scrollTo(0, 0);
+      document.querySelector("#contentItems").scrollTo(0, 0);
     },
   },
 
@@ -149,66 +149,13 @@ export default {
 };
 </script>
 
+<style></style>
+
 <style scoped>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-#content {
-  display: flex;
-  flex-flow: column;
-  position: relative;
-  padding: 10px;
-  height: 100%;
-  word-wrap: anywhere;
-  white-space: normal;
-  /* background-color: rgb(196, 196, 196); */
-}
-
 #divTitle {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.title {
-  margin-bottom: 20px;
-  padding: 10px;
-  font-size: 36px;
-  text-align: left;
-}
-
-#contentRacketsWithPagination {
-  display: flex;
-  flex: 1 0 0px;
-  flex-flow: column;
-  margin: 0;
-  padding: 0; 
-  width: 100%;
-  height: 77vh;
-  overflow: hidden;
-}
-
-#contentRackets {
-  flex: 1 0 0px;
-  margin: 10px;
-  /* min-height: 70%; */
-  background-color: var(--first-color);
-  box-shadow: var(--box-shadow);
-  overflow: auto;
-}
-
-#contentPagination {
-  display: flex;
-  padding-bottom: 20px; 
-  padding-right: 5px;
-  width: 100%; 
-}
-
-#cols {
-  margin: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
 }
 </style>
