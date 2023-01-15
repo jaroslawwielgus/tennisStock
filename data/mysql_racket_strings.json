@@ -1,0 +1,252 @@
+[
+    {
+        "name": "Babolat RPM Blast 1",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-1.ccefcf02.jpg",
+        "type": "POLIESTROWY",
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": "ŻÓŁTY",
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 2",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-1.ccefcf02.jpg",
+        "type": "POLIESTROWY",
+        "diameter": 1.30,
+        "length": 12.0,
+        "color": "BIAŁY",
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 3",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-3.854c07a4.jpg",
+        "type": "SYNTETYCZNY",
+        "diameter": 1.20,
+        "length": 200,
+        "color": "ŻÓŁTY",
+        "price": 459.00
+    },
+    {
+        "name": "Babolat RPM Blast 4",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-4.ffc17634.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 5",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-5.02d3da75.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 6",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-6.590591c6.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 7",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-7.ce1b7a96.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 8",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-8.96cb513f.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 9",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-9.f20a8a07.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 10",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-10.f2527f12.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 11",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-11.d03988d0.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 12",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-12.83b78769.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 13",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-13.cdaae421.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 14",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-14.f30202dd.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 15",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-15.81ea221a.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 16",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-16.e8ba8d18.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 17",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-17.1a712bbc.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 18",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-18.73c3741d.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 19",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-19.4f0eec02.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 20",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-20.38eaaf20.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 21",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-21.d2f8e894.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 22",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-22.75eb36b6.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 23",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-23.3dff2157.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 24",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-24.3866bc4f.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    },
+    {
+        "name": "Babolat RPM Blast 25",
+        "description": "Poliestrowy naciąg Rafaela NADALA Babolat RPM Blast w czarnym kolorze. Ośmiokątna konstrukcja rdzenia naciągu z gęstego polimeru nadaje piłce eksplodującą rotację i wyczucie pozwalające na kontrolowane prowadzenie piłki. Pokrycie z silikonu przywraca struny na miejsce po każdym uderzeniu. Rekomendowany zakres optymalnej siły naciągania: 22-28 kg.",
+        "image": "http://localhost:8081/img/Babolat-RPM-Blast-25.2d1762dd.jpg",
+        "type": 1,
+        "diameter": 1.25,
+        "length": 12.0,
+        "color": 5,
+        "price": 75.00
+    }
+]
