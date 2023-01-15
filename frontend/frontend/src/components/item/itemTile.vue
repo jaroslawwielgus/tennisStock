@@ -32,8 +32,7 @@ export default {
   height: fit-content;
   min-height: 150px;
   background-color: var(--first-color);
-  border-color: #a8a8a8;
-  border-style: solid;
+  box-shadow: var(--box-shadow);
   color: #000;
   text-align: center;
 }

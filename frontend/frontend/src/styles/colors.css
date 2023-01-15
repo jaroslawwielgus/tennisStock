@@ -1,11 +1,9 @@
 :root {
-    --first-color: #f6f2e1;
+    --first-color: #fff;
 
     --second-color: #363636;
 
     --third-color: #1c4bab;
-
-    --fourth-color: #e1e5f6;
 
     --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -17,7 +15,7 @@
 .pagination-link.is-current {
     background-color: var(--third-color);
     border-color: var(--third-color);
-    color: #fff;
+    color: var(--first-color);
 }
 
 .box {

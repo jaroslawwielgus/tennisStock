@@ -134,7 +134,7 @@ export default {
 }
 
 tr:nth-child(even) {
-  background-color: var(--fourth-color);
+  background-color: #E8E8E8;
 }
 
 </style>
