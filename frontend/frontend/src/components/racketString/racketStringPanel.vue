@@ -1,3 +1,4 @@
+
 <template>
   <div id="contentPanel">
     <itemPanelNamePriceImage :item="racketString"/>
