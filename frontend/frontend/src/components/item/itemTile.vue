@@ -2,7 +2,10 @@
 	<div id="tile" class="box">
 		<div class="tile-container">
 			<div class="tile-name-with-price">
-				<p class="tile-name">{{ item.name }}</p>
+				<p class="tile-name" :class="{ 'add-space': item.name.length < 30 }">
+					{{ truncatedName }}
+				</p>
+
 				<p class="tile-price">{{ item.price.toFixed(2) }} zł</p>
 			</div>
 			<div class="tile-image">
@@ -17,6 +20,19 @@ export default {
 	name: "itemTile",
 	props: {
 		item: { type: Object },
+	},
+	computed: {
+		truncatedName() {
+			let originalName = this.item.name;
+			if (originalName.length > 30) {
+				return originalName.slice(0, 30 - 3) + "...";
+			} else if (originalName.length < 30) {
+				let spacesToAdd = 30 - originalName.length;
+				return originalName + " ".repeat(spacesToAdd);
+			} else {
+				return originalName;
+			}
+		},
 	},
 };
 </script>
@@ -35,6 +51,11 @@ export default {
 	box-shadow: var(--box-shadow);
 	color: #000;
 	text-align: center;
+	border: 2px solid transparent;
+}
+
+#tile:hover {
+	border-color: black;
 }
 
 .tile-container {
@@ -54,6 +75,8 @@ export default {
 	text-align: left;
 	font-weight: bold;
 	font-size: 18px;
+	white-space: pre-wrap;
+	display: inline;
 }
 
 .tile-price {
@@ -70,6 +93,17 @@ export default {
 	padding-top: 10px;
 	width: 100%;
 	height: 70%;
+}
+.add-space::after {
+	content: "\00a0";
+}
+
+.tile-name {
+	white-space: pre-wrap;
+}
+
+.tile-name.add-space::after {
+	content: "\00a0";
 }
 
 @media (min-width: 576px) {
