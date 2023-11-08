@@ -5,11 +5,10 @@
 				<p class="tile-name" :class="{ 'add-space': item.name.length < 30 }">
 					{{ truncatedName }}
 				</p>
-
 				<p class="tile-price">{{ item.price.toFixed(2) }} zł</p>
 			</div>
 			<div class="tile-image">
-				<img id="i" v-bind:src="item.image" v-bind:alt="item.name" />
+				<img id="i" v-bind:src="item.image" v-bind:alt="truncatedName" />
 			</div>
 		</div>
 	</div>

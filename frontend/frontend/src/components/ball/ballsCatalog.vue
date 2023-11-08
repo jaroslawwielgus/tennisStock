@@ -22,7 +22,7 @@
 							:item="ball"
 							style="cursor: pointer"
 							@click.native="moveToBall(ball.id)"
-						/>a
+						/>
 					</div>
 					<div class="column">
 						<itemTile

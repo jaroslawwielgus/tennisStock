@@ -9,37 +9,38 @@
 					<div class="column">
 						<itemTile
 							v-for="racket in pRackets[0]"
-							:key="racket.name"
-							:item="racket"
+							:key="racket[0].name"
+							:item="racket[0]"
 							style="cursor: pointer"
-							@click.native="moveToRacket(racket.id)"
+							@click.native="moveToRacket(racket[0].id)"
+							:class="{ 'item-tile': racket[1] === 0 }"
 						/>
 					</div>
 					<div class="column">
 						<itemTile
 							v-for="racket in pRackets[1]"
-							:key="racket.name"
-							:item="racket"
+							:key="racket[0].name"
+							:item="racket[0]"
 							style="cursor: pointer"
-							@click.native="moveToRacket(racket.id)"
+							@click.native="moveToRacket(racket[0].id)"
 						/>
 					</div>
 					<div class="column">
 						<itemTile
 							v-for="racket in pRackets[2]"
-							:key="racket.name"
-							:item="racket"
+							:key="racket[0].name"
+							:item="racket[0]"
 							style="cursor: pointer"
-							@click.native="moveToRacket(racket.id)"
+							@click.native="moveToRacket(racket[0].id)"
 						/>
 					</div>
 					<div class="column">
 						<itemTile
 							v-for="racket in pRackets[3]"
-							:key="racket.name"
-							:item="racket"
+							:key="racket[0].name"
+							:item="racket[0]"
 							style="cursor: pointer"
-							@click.native="moveToRacket(racket.id)"
+							@click.native="moveToRacket(racket[0].id)"
 						/>
 					</div>
 				</div>
@@ -86,6 +87,14 @@ export default {
 	methods: {
 		...mapActions("racket", ["getRackets"]),
 
+		selectAndAddClassToFirstItemTile() {
+			const firstItemTile = this.$refs.firstItemTile;
+
+			if (firstItemTile) {
+				firstItemTile.$el.classlist.add("item-tile");
+			}
+		},
+
 		splitToFourColumns(rackets) {
 			let firstColumn = [];
 			let secondColumn = [];
@@ -94,36 +103,36 @@ export default {
 
 			if (window.innerWidth < 768) {
 				for (let i = 0; i < rackets.length; i++) {
-					firstColumn.push(rackets[i]);
+					firstColumn.push([rackets[i], i]);
 				}
 			} else if (window.innerWidth >= 768 && window.innerWidth < 1200) {
 				for (let i = 0; i < rackets.length; i++) {
 					if (i % 2 == 0) {
-						firstColumn.push(rackets[i]);
+						firstColumn.push([rackets[i], i]);
 					} else {
-						secondColumn.push(rackets[i]);
+						secondColumn.push([rackets[i], i]);
 					}
 				}
 			} else if (window.innerWidth >= 1200 && window.innerWidth < 1400) {
 				for (let i = 0; i < rackets.length; i++) {
 					if (i % 3 == 0) {
-						firstColumn.push(rackets[i]);
+						firstColumn.push([rackets[i], i]);
 					} else if (i % 3 == 1) {
-						secondColumn.push(rackets[i]);
+						secondColumn.push([rackets[i], i]);
 					} else {
-						thirdColumn.push(rackets[i]);
+						thirdColumn.push([rackets[i], i]);
 					}
 				}
 			} else {
 				for (let i = 0; i < rackets.length; i++) {
 					if (i % 4 == 0) {
-						firstColumn.push(rackets[i]);
+						firstColumn.push([rackets[i], i]);
 					} else if (i % 4 == 1) {
-						secondColumn.push(rackets[i]);
+						secondColumn.push([rackets[i], i]);
 					} else if (i % 4 == 2) {
-						thirdColumn.push(rackets[i]);
+						thirdColumn.push([rackets[i], i]);
 					} else {
-						fourthColumn.push(rackets[i]);
+						fourthColumn.push([rackets[i], i]);
 					}
 				}
 			}
@@ -165,6 +174,7 @@ export default {
 		setInterval(() => {
 			this.splitToFourColumns(this.paginatedRackets);
 		}, 1);
+		this.selectAndAddClassToFirstItemTile();
 	},
 };
 </script>
