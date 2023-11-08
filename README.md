@@ -6,6 +6,9 @@ Balls and ball:
 Rackets and racket:
 ![](https://github.com/jaroslawwielgus/tennisStock/blob/main/rakiety_i_rakieta_widok.gif)
 
+Strings and string:
+![](https://github.com/jaroslawwielgus/tennisStock/blob/main/naciągi_i_naciąg_widok.gif)
+
 ## Requirements
 - browsing the catalog of rackets
 - browsing the catalog of balls
