@@ -1,1 +1,4 @@
 .vscode/
+hs_err_pid20896.log
+hs_err_pid27828.log
+backend/restapi/target/classes/com/example/fedel/restapi/racket/Racket.class
