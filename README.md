@@ -1,6 +1,6 @@
 # Tennis Stock App - Spring Boot & Vue.js Web App
 ## How it looks
-![](https://github.com/jaroslawwielgus/tennisStock/blob/main/rakiety_i_rakieta.gif)
+![](https://github.com/jaroslawwielgus/tennisStock/blob/main/rakiety_i_rakieta_widok.gif)
 
 ## Requirements
 - browsing the catalog of rackets
