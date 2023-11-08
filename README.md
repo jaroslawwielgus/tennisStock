@@ -1,7 +1,7 @@
 # Tennis Stock App - Spring Boot & Vue.js Web App
 ## How it looks
 Balls and ball:
-![](https://github.com/jaroslawwielgus/tennisStock/blob/main/)
+![](https://github.com/jaroslawwielgus/tennisStock/blob/main/piłka_i_piłki_widok.gif)
 
 Rackets and racket:
 ![](https://github.com/jaroslawwielgus/tennisStock/blob/main/rakiety_i_rakieta_widok.gif)
