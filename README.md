@@ -1,5 +1,6 @@
 # Tennis Stock App - Spring Boot & Vue.js Web App
 ## How it looks
+(wait a moment or go to my ...widok.gif files which are located in main folder - you can see it above)
 Balls and ball:
 ![](https://github.com/jaroslawwielgus/tennisStock/blob/main/piłki_i_piłka_widok.gif)
 
