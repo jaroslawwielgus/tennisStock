@@ -1,4 +1,7 @@
 # Tennis Stock App - Spring Boot & Vue.js Web App
+## How it looks
+![](https://github.com/tennisStock/Your_GIF_Name.gif)
+
 ## Requirements
 - browsing the catalog of rackets
 - browsing the catalog of balls
