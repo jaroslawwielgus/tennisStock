@@ -1,4 +1,4 @@
-# Tennis Stock App - Spring Boot & Vue.js Web App
+# Tennis Stock App - Spring Boot & Vue.js Web App with testing in Selenium
 ## How it looks
 (wait a moment or go to my ...widok.gif files which are located in main folder - you can see it above)
 
