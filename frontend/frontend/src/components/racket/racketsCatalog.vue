@@ -48,19 +48,6 @@
 
 			<br />
 
-			<!-- <div id="contentPagination" class="columns">
-				<div class="column is-two-thirds"></div>
-				<div class="box column is-one-third">
-					<b-pagination
-						order="is-centered"
-						:total="rackets.length"
-						:per-page="perPage"
-						:current.sync="current"
-						@change="scrollToTop"
-					></b-pagination>
-				</div>
-			</div> -->
-
 			<div id="contentPagination" class="columns">
 				<div class="column is-two-thirds"></div>
 				<div class="box column is-one-third">
