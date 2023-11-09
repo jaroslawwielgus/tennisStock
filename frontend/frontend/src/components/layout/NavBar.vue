@@ -4,7 +4,11 @@
 			<b-navbar-item :to="{ name: 'rackets' }" tag="router-link">
 				<strong>Rakiety</strong>
 			</b-navbar-item>
-			<b-navbar-item :to="{ name: 'ballsCatalog' }" tag="router-link">
+			<b-navbar-item
+				:to="{ name: 'ballsCatalog' }"
+				tag="router-link"
+				class="second-navbar-item"
+			>
 				<strong>Piłki</strong>
 			</b-navbar-item>
 			<b-navbar-item :to="{ name: 'racketStringsCatalog' }" tag="router-link">

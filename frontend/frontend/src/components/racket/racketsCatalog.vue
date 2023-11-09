@@ -48,7 +48,7 @@
 
 			<br />
 
-			<div id="contentPagination" class="columns">
+			<!-- <div id="contentPagination" class="columns">
 				<div class="column is-two-thirds"></div>
 				<div class="box column is-one-third">
 					<b-pagination
@@ -58,6 +58,21 @@
 						:current.sync="current"
 						@change="scrollToTop"
 					></b-pagination>
+				</div>
+			</div> -->
+
+			<div id="contentPagination" class="columns">
+				<div class="column is-two-thirds"></div>
+				<div class="box column is-one-third">
+					<b-pagination
+						order="is-centered"
+						:total="rackets.length"
+						:per-page="perPage"
+						:current.sync="current"
+						@change="scrollToTop"
+						@hook:mounted="addSecondPaginationLinkClass"
+					>
+					</b-pagination>
 				</div>
 			</div>
 		</div>
@@ -151,6 +166,16 @@ export default {
 		scrollToTop() {
 			document.querySelector("#contentItems").scrollTo(0, 0);
 		},
+
+		addSecondPaginationLinkClass() {
+			const secondPaginationLink = document.querySelector(
+				".pagination-link:nth-child(2)"
+			);
+
+			if (secondPaginationLink) {
+				secondPaginationLink.classList.add("second-pagination-link");
+			}
+		},
 	},
 
 	computed: {
@@ -175,6 +200,7 @@ export default {
 			this.splitToFourColumns(this.paginatedRackets);
 		}, 1);
 		this.selectAndAddClassToFirstItemTile();
+		this.pag();
 	},
 };
 </script>
