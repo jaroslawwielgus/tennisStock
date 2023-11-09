@@ -1,4 +1,16 @@
 # Tennis Stock App - Spring Boot & Vue.js Web App
+## How it looks
+(wait a moment or go to my ...widok.gif files which are located in main folder - you can see it above)
+
+Balls and ball:
+![](https://github.com/jaroslawwielgus/tennisStock/blob/main/piłki_i_piłka_widok.gif)
+
+Rackets and racket:
+![](https://github.com/jaroslawwielgus/tennisStock/blob/main/rakiety_i_rakieta_widok.gif)
+
+Strings and string:
+![](https://github.com/jaroslawwielgus/tennisStock/blob/main/naciągi_i_naciąg_widok.gif)
+
 ## Requirements
 - browsing the catalog of rackets
 - browsing the catalog of balls
